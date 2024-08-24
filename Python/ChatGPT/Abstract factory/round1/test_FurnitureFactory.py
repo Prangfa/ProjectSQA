@@ -1,9 +1,9 @@
 import unittest
 
-# Assuming the previous code is imported and available under the same module
-# from furniture_factory import *
+# Assuming the original code is in a module named 'furniture'
+from FurnitureFactory import *
 
-class TestAbstractFactoryPattern(unittest.TestCase):
+class TestFurnitureFactory(unittest.TestCase):
 
     def test_victorian_chair(self):
         factory = VictorianFurnitureFactory()
@@ -29,19 +29,5 @@ class TestAbstractFactoryPattern(unittest.TestCase):
         self.assertIsInstance(sofa, ModernSofa)
         self.assertEqual(sofa.lie_on(), "Lying on a Modern Sofa")
 
-    def test_client_code_victorian(self):
-        factory = VictorianFurnitureFactory()
-        chair = factory.create_chair()
-        sofa = factory.create_sofa()
-        self.assertEqual(chair.sit_on(), "Sitting on a Victorian Chair")
-        self.assertEqual(sofa.lie_on(), "Lying on a Victorian Sofa")
-
-    def test_client_code_modern(self):
-        factory = ModernFurnitureFactory()
-        chair = factory.create_chair()
-        sofa = factory.create_sofa()
-        self.assertEqual(chair.sit_on(), "Sitting on a Modern Chair")
-        self.assertEqual(sofa.lie_on(), "Lying on a Modern Sofa")
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     unittest.main()
