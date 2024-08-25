@@ -1,0 +1,1 @@
+create a Python code for a mediator design pattern with a Pytest version to make 100% branch coverage 
