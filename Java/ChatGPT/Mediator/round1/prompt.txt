@@ -1,0 +1,1 @@
+Create a Java code about abstract factory design pattern and a test version for it by using junit
